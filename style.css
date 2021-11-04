@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+ body{
+     
+    background-size: cover;
+    background-repeat: no-repeat;
+     
+ }
+
+.navbar{
+    height: 5em;
+
+}
+
+.firsth{
+    margin-top: 6em;
+    text-align: center;
+    height: 3em;
+}
+.secondh{
+    margin-top: 2.5em;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 3em;
+}
+.Thirdh {
+    margin-top: 3em;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 3em;
+}
+
+footer{
+    height: 8em;
+    position: relative;
+    margin-top: 1.5em;
+    padding-top: 2em;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+footer em{
+    color: rgb(56, 121, 67);
+}
+.myfoot {
+    height: 7em;
+    width: 80em;
+    float: left;
+}
+
+.card img{
+    height: 15em;
+}
+
+.culture{
+    position: relative;
+    text-align: center;
+    margin-top: 2em;
+    background-color: rgb(50, 109, 45);
+    height: 30em;
+   
+}
+.container3{
+    background-image: url(./images/photos/Explore\ Palakkadu.jpg);
+    margin-top: 5em;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container3 ul{
+    width: 600px;
+    margin-top: 12em;
+    margin-left: 8em;
+    font-weight: bolder;
+    
+    
+    
+}
+.container3 img{
+    padding: 3em;
+}
+.containe3 a{
+    text-decoration: black;
+}
+.list-group a{
+    color: black;
+}
+.district {
+    float: left;
+    height: 20em;
+    width: 20em;
+    background-color: black;
+    list-style: none;
+    margin-top: 3em;
+    margin-left: 6em;
+}
+
+.district a{
+    text-decoration: none;
+    color: black
+    
+}
+.distname{
+    position: relative;
+    margin-top:4em ;
+    background-color: rgb(67, 134, 67);
+    text-align: center;
+}
+
+
+
