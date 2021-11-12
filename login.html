@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script  defer src="./bootstrap.min.js"></script>
+    <script defer src="./script.js"></script>
 </head>
     
 <body>
@@ -88,17 +89,19 @@
      <div class="row">
          <div class="column" style="float: left; width: 50%;">
      
-     <form class="row g-3 mt-5   ms-4 bg-light">
+     <form action="index.html" class="row g-3 mt-5   ms-4 bg-light" onsubmit="return firstValidate() && secondValidate()">
         
         <div class="col-12">
             
                 
-          <label for="inputEmail" class="form-label">Email or Username</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder=" Type Email or Username">
+          <label for="inputEmail" class="form-label" id="emailUser" >Email or Username</label>
+          <input type="email" class="form-control" id="inputEmail" required placeholder=" Type Email or Username">
+          <label for="error" id="errorEmail"></label>
         </div>
         <div class="col-12">
           <label for="inPassword" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword" placeholder="Type Password">
+          <input type="password" class="form-control" required id="inputPassword" placeholder="Type Password">
+          <label for="error" id="errorPwd"></label>
         </div>
         
         
@@ -190,7 +193,7 @@
           <input type="text" class="form-control" id="inpuText">
         </div>
         <div class="col-12">
-            <label for="inputUsername" class="form-label">Username</label>
+            <label for="inputUsername" class="form-label">Mobile Number</label>
             <input type="text" class="form-control" id="inputUsername" placeholder=" Type Username">
           </div>
         <div class="col-12">
@@ -201,7 +204,10 @@
           <label for="inputAddress2" class="form-label">Password</label>
           <input type="password" class="form-control" id="inputPassword4" placeholder="Type Password">
         </div>
-        
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Retype Password</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Type Password">
+        </div>
         
         <div class="col-md-3">
             <label for="inputDate" class="form-label">Date of Birth</label>
