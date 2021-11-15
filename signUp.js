@@ -69,13 +69,13 @@ function validate1(){
     var regExp2 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{6,}$/
 
     if (regExp2.test(regPwd.value)) {
-       errorPwd.style.display="none";
+       errorP.style.display="none";
         return true;
         
 
     }
     else{
-        errorPwd.innerHTML="Invalid Password";
+        errorP.innerHTML="Invalid Password";
         errorP.style.color="red";
         return false;
     }
@@ -90,6 +90,7 @@ function checkPassword(){
         else {
             
             errorRepwd.innerHTML="Password does not Match";
+            errorRepwd.style.color="red";
             return false;
         }
     }
