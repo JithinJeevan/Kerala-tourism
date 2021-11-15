@@ -94,7 +94,7 @@ function checkPassword(){
 
     var lng=regPwd.value;
      
-    var regExp3 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{5,8}$/
+    var regExp3 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{6,8}$/
     var regExp4 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{9,12}$/
     var regExp5 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{13,}$/
     
@@ -105,14 +105,14 @@ function checkPassword(){
          bar2.style.backgroundColor="gray";
          bar3.style.backgroundColor="gray";
      } 
-    else if( lng.length<=4   ) {
+    else if( lng.length<=5   ) {
         bar1.style.backgroundColor="red";
         bar2.style.backgroundColor="gray";
         bar3.style.backgroundColor="gray";
         strong.innerHTML="Password Strength:  Not Enough";
     }  
     
-    else if( 5<=lng.length<=8 && regPwd.value.match(regExp3)  ) {
+    else if( 6<=lng.length<=8 && regPwd.value.match(regExp3)  ) {
         bar1.style.backgroundColor="green";
         bar2.style.backgroundColor="gray";
         bar3.style.backgroundColor="gray";
