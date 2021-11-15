@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script  defer src="./bootstrap.min.js"></script>
+    
+    <script defer src="./signUp.js"></script>
     <script defer src="./script.js"></script>
 </head>
     
@@ -89,13 +91,13 @@
      <div class="row">
          <div class="column" style="float: left; width: 50%;">
      
-     <form action="index.html" class="row g-3 mt-5   ms-4 bg-light" onsubmit="return firstValidate() && secondValidate()">
+     <form action="index.html" id="fromRegister" class="row g-3 mt-5   ms-4 bg-light" onsubmit="return firstValidate() && secondValidate()">
         
         <div class="col-12">
             
                 
           <label for="inputEmail" class="form-label" id="emailUser" >Email or Username</label>
-          <input type="email" class="form-control" id="inputEmail" required placeholder=" Type Email or Username">
+          <input type="email" class="form-control" id="inputEmail" required placeholder=" Type Email ">
           <label for="error" id="errorEmail"></label>
         </div>
         <div class="col-12">
@@ -183,30 +185,50 @@
      <!-- sign up start -->
      
      
-     <form  id="signup" class="row g-3 mt-5 mx-4 bg-light" >
+     <form action="#fromRegister" id="signup" class="row g-3 mt-5 mx-4 bg-light" onsubmit="return nameValidate() && numberValidate() && validate() && validate1() && checkPassword() ">
         <div class="col-md-6">
           <label for="inputText" class="form-label" >First Name</label>
-          <input type="email" class="form-control" id="inputText">
+          <input type="text" class="form-control" id="inputTxt" required>
         </div>
         <div class="col-md-6">
           <label for="inputText" class="form-label">Last Name</label>
-          <input type="text" class="form-control" id="inpuText">
+          <input type="text" class="form-control" id="inputText" required>
+          <label for="inputText" class="form-label" id="errorName"></label>
         </div>
         <div class="col-12">
             <label for="inputUsername" class="form-label">Mobile Number</label>
-            <input type="text" class="form-control" id="inputUsername" placeholder=" Type Username">
+            <input type="text" class="form-control" id="inputNumber" placeholder=" Type Mobile Number" required>
+            <label for="inputUsername" class="form-label" id="errorNumber"></label>
           </div>
         <div class="col-12">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Type Email">
+          <label for="inputEmail4" class="form-label" id="regEmail">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Type Email" required>
+          <label for="inputAddress2" id="errorRegemail"></label>
         </div>
         <div class="col-12">
-          <label for="inputAddress2" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Type Password">
+          <label for="inputAddress2" class="form-label" id="regPwd">Password</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Type Password" required  >
+          <label for="inputAddress2" id="errorRegpwd"></label>
+          <br>
+          
         </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label" id="weak">Password strength</label>
+          <input id="bar1" style="background-color: rgb(165, 165, 154); height:2px; width: 168px; display: inline;" class="form-control">
+          <input id="bar2" style="background-color: rgb(165, 165, 154); height:2px;  width: 168px; display: inline; " class="form-control ">
+          <input id="bar3" style="background-color: rgb(165, 165, 154); height:2px;  width: 168px; display: inline; " class="form-control ">
+          <label for="inputAddress2" id="strength"></label>
+          <br>
+          
+        </div>
+
+        
+
+        
         <div class="col-12">
           <label for="inputAddress2" class="form-label">Retype Password</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Type Password">
+          <input type="password" class="form-control" id="rePwd" placeholder="Type Password" required>
+          <label for="inputAddress2" id="errorRepwd"></label>
         </div>
         
         <div class="col-md-3">

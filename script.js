@@ -1,3 +1,4 @@
+// Login validation start
 var loginEmail = document.getElementById("inputEmail");
 var loginPwd = document.getElementById("inputPassword");
 var errorEmail = document.getElementById("errorEmail");
@@ -22,7 +23,7 @@ function firstValidate(){
     }
 }
 function secondValidate(){
-    var regExp2 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{6,16}$/
+    var regExp2 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{8,}$/
 
     if (regExp2.test(loginPwd.value)) {
        
@@ -35,3 +36,4 @@ function secondValidate(){
         return false;
     }
 }
+// Login Validation ends
