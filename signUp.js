@@ -60,7 +60,7 @@ function validate(){
 }
 // Password Validation
 function validate1(){
-    var regExp2 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{8,}$/
+    var regExp2 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{6,}$/
 
     if (regExp2.test(regPwd.value)) {
        errorPwd.style.display="none";
