@@ -23,7 +23,7 @@ function firstValidate(){
     }
 }
 function secondValidate(){
-    var regExp2 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{5,}$/
+    var regExp2 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{8,}$/
 
     if (regExp2.test(loginPwd.value)) {
        
