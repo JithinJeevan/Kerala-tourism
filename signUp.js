@@ -19,6 +19,7 @@ function nameValidate(){
     var reg1= /^[A-Za-z]+$/
 
     if ( reg1.test(name2.value)&& reg1.test (nam.value )){
+        errorName.style.display="none";
         return true;
 
     }
@@ -39,7 +40,7 @@ function numberValidate(){
    var reg2= /^([1-9])([\d]{2}[-\s.]?)([\d]{3}[-\s.]?)([\d]{4})$/
 
     if (reg2.test(num.value)) {
-        
+        errorNum.style.display="none";
         return true;
     }
     else{
@@ -54,7 +55,7 @@ function validate(){
     
     if(regExp1.test(regEmail.value) ){
 
-        
+        errorE.style.display="none";
         return true;
     }
     else{
@@ -66,7 +67,7 @@ function validate(){
 }
 // Password Validation
 function validate1(){
-    var regExp2 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{6,}$/
+    var regExp2 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{8,}$/
 
     if (regExp2.test(regPwd.value)) {
        errorP.style.display="none";
@@ -101,9 +102,9 @@ function checkPassword(){
 
         var lng=regPwd.value;
          
-        var regExp3 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{6,8}$/
-        var regExp4 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{9,12}$/
-        var regExp5 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{13,}$/
+        var regExp3 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{8,10}$/
+        var regExp4 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{11,13}$/
+        var regExp5 = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@#$%^&*]{14,}$/
         
         
         
@@ -112,26 +113,26 @@ function checkPassword(){
              bar2.style.backgroundColor="gray";
              bar3.style.backgroundColor="gray";
          } 
-        else if( lng.length<=5   ) {
+        else if( lng.length<=7   ) {
             bar1.style.backgroundColor="red";
             bar2.style.backgroundColor="gray";
             bar3.style.backgroundColor="gray";
             strong.innerHTML="Password Strength:  Not Enough";
         }  
         
-        else if( 6<=lng.length<=8 && regPwd.value.match(regExp3)  ) {
+        else if( 8<=lng.length<=10 && regPwd.value.match(regExp3)  ) {
             bar1.style.backgroundColor="green";
-            bar2.style.backgroundColor="gray";
+            bar2.style.backgroundColor="orange";
             bar3.style.backgroundColor="gray";
             strong.innerHTML="Password Strength:  Weak";
         } 
-        else if( 9<=lng.length<=12 && regPwd.value.match(regExp4)  ) {
+        else if( 11<=lng.length<=13 && regPwd.value.match(regExp4)  ) {
             bar1.style.backgroundColor="green";
             bar2.style.backgroundColor="green";
-            bar3.style.backgroundColor="gray";
+            bar3.style.backgroundColor="orange";
             strong.innerHTML="Password Strength:  Medium";
         }  
-        else if( 13<=lng.length && regPwd.value.match(regExp5)  ) {
+        else if( 14<=lng.length && regPwd.value.match(regExp5)  ) {
             bar1.style.backgroundColor="green";
             bar2.style.backgroundColor="green";
             bar3.style.backgroundColor="green";
